@@ -1,0 +1,5 @@
+LLM_API_KEY=123456789
+LLM_ENDPOINT=https://XXXXXX.openai.azure.com/
+LLM_API_VERSION=2024-05-01-preview
+LLM_PROVIDER=azure
+MODEL=gpt-4o
