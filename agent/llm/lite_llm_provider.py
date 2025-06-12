@@ -1,3 +1,4 @@
+from langchain_core.runnables import RunnableLambda
 import litellm
 # litellm._turn_on_debug()
 from agent.config import LLM_API_KEY, LLM_ENDPOINT, LLM_API_VERSION, LLM_PROVIDER, MODEL
