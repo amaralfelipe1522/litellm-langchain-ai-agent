@@ -18,4 +18,11 @@ curl -X POST "http://127.0.0.1:8080/agent/ask" \
      -d '{"question": "Olá", "session_id": "user123"}'
 ```
 
-Documentação estará disponível em http://127.0.0.1:8080/docs
+## Usando Docker
+
+```sh
+docker build -t agent-api .
+docker run -d -p 8080:8080 --name agent_api agent-api
+```
+
+### Documentação estará disponível em http://127.0.0.1:8080/docs
