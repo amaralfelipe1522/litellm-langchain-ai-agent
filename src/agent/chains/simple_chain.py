@@ -1,5 +1,5 @@
-from agent.prompts.build_prompt import get_prompt
-from agent.llm.lite_llm_provider import get_llm
+from src.agent.prompts.build_prompt import get_prompt
+from src.agent.llm.lite_llm_provider import get_llm
 from langchain_core.runnables import RunnableLambda
 
 def build_chain():

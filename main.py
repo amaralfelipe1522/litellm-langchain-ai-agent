@@ -1,12 +1,10 @@
-from agent.history.build_history import build_chain_with_history
+from fastapi import FastAPI
+from src.api.routers.v1 import health, ask
 
-if __name__ == "__main__":
-    chain = build_chain_with_history()
-    while True:
-        user_input = input("Digite sua pergunta: ")
+app = FastAPI(
+    title="AI Agent API",
+    version="1.0.0",
+)
 
-        if user_input.lower() in ["sair", "exit", "quit"]:
-            break
-
-        resp = chain.invoke({"input": user_input}, config={"configurable": {"session_id": "usuario_123"}})
-        print("Resposta: ", resp)
+app.include_router(health.router)
+app.include_router(ask.router)
