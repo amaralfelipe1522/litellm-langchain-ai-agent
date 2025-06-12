@@ -1,7 +1,10 @@
-from agent.chains.simple_chain import build_chain
+from fastapi import FastAPI
+from src.api.routers.v1 import health, ask
 
-if __name__ == "__main__":
-    chain = build_chain()
-    input = input("Digite sua pergunta: ")
-    resp = chain({"input": input})
-    print("Resposta: ", resp)
+app = FastAPI(
+    title="AI Agent API",
+    version="1.0.0",
+)
+
+app.include_router(health.router)
+app.include_router(ask.router)
