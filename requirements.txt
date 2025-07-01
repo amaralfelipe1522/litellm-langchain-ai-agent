@@ -8,3 +8,7 @@ python-dotenv
 fastapi
 pydantic
 uvicorn
+boto3
+botocore
+dotenv
+langchain_core
